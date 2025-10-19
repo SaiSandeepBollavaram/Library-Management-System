@@ -1,0 +1,323 @@
+@startuml Library Management System
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam nodesep 60
+skinparam ranksep 80
+
+' ==================== MAIN APP ====================
+class LibraryManagementDemo {
+  - bookService
+  - patronService
+  - lendingService
+  - branchService
+  - transferService
+  - reservationService
+  - recommendationService
+  + main()
+  + runFullDemo()
+}
+
+' ==================== DOMAIN ENTITIES ====================
+class Book {
+  - isbn: String
+  - title: String
+  - author: String
+  - publicationYear: int
+  - status: BookStatus
+  - branchId: String
+  + isAvailable()
+}
+
+abstract class Patron {
+  - patronId: String
+  - name: String
+  - email: String
+  - patronType: PatronType
+  - currentBorrowedCount: int
+  + canBorrowMore()
+  + {abstract} getBorrowLimit()
+}
+
+class StudentPatron {
+  + getBorrowLimit(): int
+}
+
+class FacultyPatron {
+  + getBorrowLimit(): int
+}
+
+class LendingRecord {
+  - recordId: String
+  - patronId: String
+  - isbn: String
+  - borrowDate: LocalDateTime
+  - dueDate: LocalDateTime
+  - returnDate: LocalDateTime
+  + isActive()
+  + isOverdue()
+}
+
+class Branch {
+  - branchId: String
+  - name: String
+  - address: String
+}
+
+class Reservation {
+  - reservationId: String
+  - isbn: String
+  - patronId: String
+  - status: ReservationStatus
+  - queuePosition: int
+}
+
+class BookTransferRequest {
+  - transferId: String
+  - isbn: String
+  - sourceBranchId: String
+  - destinationBranchId: String
+  - status: TransferStatus
+}
+
+enum BookStatus {
+  AVAILABLE
+  BORROWED
+  RESERVED
+  IN_TRANSIT
+}
+
+enum PatronType {
+  STUDENT
+  FACULTY
+}
+
+enum ReservationStatus {
+  ACTIVE
+  AVAILABLE
+  FULFILLED
+  CANCELLED
+  EXPIRED
+}
+
+enum TransferStatus {
+  PENDING
+  IN_TRANSIT
+  COMPLETED
+  REJECTED
+  CANCELLED
+}
+
+' ==================== FACTORY ====================
+class PatronFactory <<Factory>> {
+  + {static} createStudent()
+  + {static} createFaculty()
+}
+
+' ==================== REPOSITORIES ====================
+interface BookRepository {
+  + add(Book)
+  + findByIsbn(String)
+  + modify(Book)
+  + delete(String)
+}
+
+interface PatronRepository {
+  + add(Patron)
+  + findById(String)
+  + modify(Patron)
+  + delete(String)
+}
+
+interface LendingRepository {
+  + add(LendingRecord)
+  + findById(String)
+  + findAll()
+}
+
+interface BranchRepository {
+  + save(Branch)
+  + findById(String)
+  + findAll()
+}
+
+interface ReservationRepository {
+  + add(Reservation)
+  + findById(String)
+  + update(Reservation)
+}
+
+class InMemoryBookRepository
+class InMemoryPatronRepository
+class InMemoryLendingRepository
+class InMemoryBranchRepository
+class InMemoryReservationRepository
+
+' ==================== SERVICES ====================
+class BookService {
+  - bookRepository
+  + addBook(Book)
+  + modifyBook(Book)
+  + removeBook(String)
+  + searchBooks(SearchStrategy, String)
+  + getAvailableBooks()
+}
+
+class PatronService {
+  - patronRepository
+  + addPatron(Patron)
+  + updatePatron(Patron)
+  + removePatron(String)
+  + findPatronById(String)
+}
+
+class LendingService {
+  - bookRepository
+  - patronRepository
+  - lendingRepository
+  - observers
+  + borrowBook(String, String)
+  + returnBook(String, String)
+  + addObserver(LibraryEventObserver)
+}
+
+class BranchService {
+  - branchRepository
+  + registerBranch(Branch)
+  + findBranchById(String)
+  + getAllBranches()
+}
+
+class BookTransferService {
+  - bookRepository
+  - branchService
+  + initiateTransfer(String, String, String)
+  + completeTransfer(String)
+  + cancelTransfer(String)
+}
+
+class ReservationService {
+  - reservationRepository
+  - bookRepository
+  - patronRepository
+  - observers
+  + createReservation(String, String)
+  + processBookReturn(String)
+  + addObserver(ReservationObserver)
+}
+
+class RecommendationService {
+  - bookRepository
+  - patronRepository
+  - strategy
+  + getRecommendations(String, int)
+  + setStrategy(RecommendationStrategy)
+}
+
+' ==================== STRATEGIES ====================
+interface SearchStrategy <<Strategy>> {
+  + search(List<Book>, String)
+}
+
+class TitleSearchStrategy
+class AuthorSearchStrategy
+class ISBNSearchStrategy
+
+interface RecommendationStrategy <<Strategy>> {
+  + recommend(String, List<Book>, int)
+}
+
+class AuthorBasedRecommendationStrategy
+class PopularityBasedRecommendationStrategy
+
+' ==================== OBSERVERS ====================
+interface LibraryEventObserver <<Observer>> {
+  + onBookBorrowed(LendingRecord)
+  + onBookReturned(LendingRecord)
+}
+
+class LoggingObserver
+class EmailNotificationObserver
+
+interface ReservationObserver <<Observer>> {
+  + update(String, Object)
+}
+
+class ReservationNotificationObserver
+
+' ==================== RELATIONSHIPS ====================
+
+' Domain Hierarchy
+Patron <|-- StudentPatron
+Patron <|-- FacultyPatron
+
+' Factory creates Patrons
+PatronFactory .> StudentPatron : creates
+PatronFactory .> FacultyPatron : creates
+
+' Repository Implementations
+BookRepository <|.. InMemoryBookRepository
+PatronRepository <|.. InMemoryPatronRepository
+LendingRepository <|.. InMemoryLendingRepository
+BranchRepository <|.. InMemoryBranchRepository
+ReservationRepository <|.. InMemoryReservationRepository
+
+' Strategy Implementations
+SearchStrategy <|.. TitleSearchStrategy
+SearchStrategy <|.. AuthorSearchStrategy
+SearchStrategy <|.. ISBNSearchStrategy
+RecommendationStrategy <|.. AuthorBasedRecommendationStrategy
+RecommendationStrategy <|.. PopularityBasedRecommendationStrategy
+
+' Observer Implementations
+LibraryEventObserver <|.. LoggingObserver
+LibraryEventObserver <|.. EmailNotificationObserver
+ReservationObserver <|.. ReservationNotificationObserver
+
+' Services use Repositories
+BookService --> BookRepository
+PatronService --> PatronRepository
+LendingService --> BookRepository
+LendingService --> PatronRepository
+LendingService --> LendingRepository
+BranchService --> BranchRepository
+BookTransferService --> BookRepository
+BookTransferService --> BranchService
+ReservationService --> ReservationRepository
+ReservationService --> BookRepository
+ReservationService --> PatronRepository
+RecommendationService --> BookRepository
+RecommendationService --> PatronRepository
+
+' Services use Strategies
+BookService ..> SearchStrategy
+RecommendationService --> RecommendationStrategy
+
+' Services notify Observers
+LendingService o-- LibraryEventObserver
+ReservationService o-- ReservationObserver
+
+' Main App uses Services
+LibraryManagementDemo --> BookService
+LibraryManagementDemo --> PatronService
+LibraryManagementDemo --> LendingService
+LibraryManagementDemo --> BranchService
+LibraryManagementDemo --> BookTransferService
+LibraryManagementDemo --> ReservationService
+LibraryManagementDemo --> RecommendationService
+
+' Entities have Enums
+Book --> BookStatus
+Patron --> PatronType
+Reservation --> ReservationStatus
+BookTransferRequest --> TransferStatus
+
+' Services manage Entities
+BookService ..> Book
+PatronService ..> Patron
+LendingService ..> LendingRecord
+BranchService ..> Branch
+ReservationService ..> Reservation
+BookTransferService ..> BookTransferRequest
+
+@enduml

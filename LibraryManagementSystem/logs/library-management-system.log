@@ -1,0 +1,436 @@
+2025-10-19 16:15:06.772 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134685991
+2025-10-19 16:15:06.780 [main] INFO  o.l.service.BookService - Book added successfully: 978-0596009205
+2025-10-19 16:15:06.780 [main] INFO  o.l.service.BookService - Book added successfully: 978-0132350884
+2025-10-19 16:15:06.807 [main] INFO  o.l.service.PatronService - Patron added successfully: STUC1469D68
+2025-10-19 16:15:06.807 [main] INFO  o.l.service.PatronService - Patron added successfully: FACC5EC4123
+2025-10-19 16:15:06.811 [main] INFO  o.l.service.BookService - Searching books with query: Java
+2025-10-19 16:15:06.830 [main] INFO  o.l.service.BookService - Searching books with query: Martin
+2025-10-19 16:15:06.833 [main] INFO  o.l.service.BookService - Searching books with query: 978-0134685991
+2025-10-19 16:15:06.839 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0134685991, Patron: STUC1469D68
+2025-10-19 16:15:06.848 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0134685991, Patron: STUC1469D68
+2025-10-19 16:15:06.850 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0596009205, Patron: STUC1469D68
+2025-10-19 17:32:31.059 [main] INFO  o.l.service.LendingService - ReservationService integrated with LendingService
+2025-10-19 17:32:31.067 [main] INFO  o.l.service.LendingService - Observer added: LoggingObserver
+2025-10-19 17:32:31.077 [main] INFO  o.l.service.LendingService - Observer added: EmailNotificationObserver
+2025-10-19 17:32:31.077 [main] INFO  o.l.service.ReservationService - Observer added: ReservationNotificationObserver
+2025-10-19 17:32:31.079 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR001 - Downtown Library
+2025-10-19 17:32:31.080 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR002 - Suburban Library
+2025-10-19 17:32:31.080 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR003 - University Library
+2025-10-19 17:32:31.085 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134685991
+2025-10-19 17:32:31.086 [main] INFO  o.l.service.BookService - Book added successfully: 978-0596009205
+2025-10-19 17:32:31.086 [main] INFO  o.l.service.BookService - Book added successfully: 978-0132350884
+2025-10-19 17:32:31.086 [main] INFO  o.l.service.BookService - Book added successfully: 978-0201633610
+2025-10-19 17:32:31.086 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134494166
+2025-10-19 17:32:31.086 [main] INFO  o.l.service.BookService - Book added successfully: 978-0137081073
+2025-10-19 17:32:31.121 [main] INFO  o.l.service.PatronService - Patron added successfully: STUF591C403
+2025-10-19 17:32:31.122 [main] INFO  o.l.service.PatronService - Patron added successfully: FACBF0C65E8
+2025-10-19 17:32:31.122 [main] INFO  o.l.service.PatronService - Patron added successfully: STUB21DC5A3
+2025-10-19 17:32:31.124 [main] INFO  o.l.service.BookTransferService - Transfer request initiated: ff409abe-ea5a-4b7b-9016-a307939fd7c0 for book 978-0132350884 from branch BR002 to branch BR001
+2025-10-19 17:32:31.125 [main] INFO  o.l.service.BookTransferService - Transfer completed: ff409abe-ea5a-4b7b-9016-a307939fd7c0 - Book 978-0132350884 moved from branch BR002 to branch BR001
+2025-10-19 17:32:31.128 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0134685991, Patron: STUF591C403, Due Date: 2025-11-02T17:32:31.128501
+2025-10-19 17:32:31.130 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0134685991, Patron: STUF591C403
+2025-10-19 17:32:31.132 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0134685991 by patron FACBF0C65E8
+2025-10-19 17:32:31.144 [main] INFO  o.l.service.ReservationService - Reservation created: 5c7fea38-3e59-4367-8290-d757af99a5a3 for book 978-0134685991 at position 1
+2025-10-19 17:32:31.145 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 17:32:31.145 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0134685991
+2025-10-19 17:32:31.145 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: FACBF0C65E8
+2025-10-19 17:32:31.145 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 1
+2025-10-19 17:32:31.145 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 17:32:31.145 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 17:32:31.146 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0134685991 by patron STUB21DC5A3
+2025-10-19 17:32:31.146 [main] INFO  o.l.service.ReservationService - Reservation created: 70dfb40e-9a1f-4772-913d-6de3b2e6ea5e for book 978-0134685991 at position 2
+2025-10-19 17:32:31.146 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 17:32:31.146 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0134685991
+2025-10-19 17:32:31.146 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: STUB21DC5A3
+2025-10-19 17:32:31.146 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 2
+2025-10-19 17:32:31.147 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 17:32:31.147 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 17:32:31.152 [main] INFO  o.l.observer.LoggingObserver - Book returned - ISBN: 978-0134685991, Patron: STUF591C403, Return Date: 2025-10-19T17:32:31.152055
+2025-10-19 17:32:31.152 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0134685991, Patron: STUF591C403
+2025-10-19 17:32:31.152 [main] INFO  o.l.service.ReservationService - Processing book return for reservations: 978-0134685991
+2025-10-19 17:32:31.153 [main] INFO  o.l.service.ReservationService - Notifying patron Dr. Bob Smith that book 978-0134685991 is ready for pickup
+2025-10-19 17:32:31.154 [main] INFO  o.l.o.ReservationNotificationObserver - === BOOK READY FOR PICKUP ===
+2025-10-19 17:32:31.156 [main] INFO  o.l.o.ReservationNotificationObserver - Dear Dr. Bob Smith, your reserved book is ready!
+2025-10-19 17:32:31.156 [main] INFO  o.l.o.ReservationNotificationObserver - Book ISBN: 978-0134685991
+2025-10-19 17:32:31.156 [main] INFO  o.l.o.ReservationNotificationObserver - Patron: Dr. Bob Smith (555-1002)
+2025-10-19 17:32:31.156 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation ID: 5c7fea38-3e59-4367-8290-d757af99a5a3
+2025-10-19 17:32:31.156 [main] INFO  o.l.o.ReservationNotificationObserver - Please pick up the book within 3 days.
+2025-10-19 17:32:31.156 [main] INFO  o.l.o.ReservationNotificationObserver - Expiry Date: 2025-10-22T17:32:31.152917
+2025-10-19 17:32:31.156 [main] INFO  o.l.o.ReservationNotificationObserver - ============================
+
+2025-10-19 17:32:31.156 [main] INFO  o.l.service.LendingService - Processed reservations for returned book: 978-0134685991
+2025-10-19 17:32:31.157 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: AuthorBasedRecommendationStrategy
+2025-10-19 17:32:31.159 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STUF591C403 with limit: 3
+2025-10-19 17:32:31.188 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STUF591C403
+2025-10-19 17:32:31.222 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: PopularityBasedRecommendationStrategy
+2025-10-19 17:32:31.223 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STUF591C403 with limit: 3
+2025-10-19 17:32:31.228 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STUF591C403
+2025-10-19 17:39:21.753 [main] INFO  o.l.service.LendingService - ReservationService integrated with LendingService
+2025-10-19 17:39:21.758 [main] INFO  o.l.service.LendingService - Observer added: LoggingObserver
+2025-10-19 17:39:21.760 [main] INFO  o.l.service.LendingService - Observer added: EmailNotificationObserver
+2025-10-19 17:39:21.760 [main] INFO  o.l.service.ReservationService - Observer added: ReservationNotificationObserver
+2025-10-19 17:39:21.765 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134685991
+2025-10-19 17:39:21.765 [main] INFO  o.l.service.BookService - Book added successfully: 978-0596009205
+2025-10-19 17:39:21.765 [main] INFO  o.l.service.BookService - Book added successfully: 978-0132350884
+2025-10-19 17:39:21.787 [main] INFO  o.l.service.PatronService - Patron added successfully: STU613BA8C8
+2025-10-19 17:39:21.788 [main] INFO  o.l.service.PatronService - Patron added successfully: FAC9BADF394
+2025-10-19 17:39:21.800 [main] INFO  o.l.service.BookService - Searching books with query: Java
+2025-10-19 17:39:21.802 [main] INFO  o.l.service.BookService - Searching books with query: Martin
+2025-10-19 17:39:21.803 [main] INFO  o.l.service.BookService - Searching books with query: 978-0134685991
+2025-10-19 17:39:21.810 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0134685991, Patron: STU613BA8C8, Due Date: 2025-11-02T17:39:21.809517
+2025-10-19 17:39:21.813 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0134685991, Patron: STU613BA8C8
+2025-10-19 17:39:21.821 [main] INFO  o.l.observer.LoggingObserver - Book returned - ISBN: 978-0134685991, Patron: STU613BA8C8, Return Date: 2025-10-19T17:39:21.821310
+2025-10-19 17:39:21.822 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0134685991, Patron: STU613BA8C8
+2025-10-19 17:39:21.822 [main] INFO  o.l.service.ReservationService - Processing book return for reservations: 978-0134685991
+2025-10-19 17:39:21.839 [main] INFO  o.l.service.LendingService - Processed reservations for returned book: 978-0134685991
+2025-10-19 17:39:21.846 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0596009205, Patron: STU613BA8C8, Due Date: 2025-11-02T17:39:21.845959
+2025-10-19 17:39:21.846 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0596009205, Patron: STU613BA8C8
+2025-10-19 17:39:21.850 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR001 - Downtown Library
+2025-10-19 17:39:21.853 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR002 - Suburban Library
+2025-10-19 17:39:21.853 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR003 - University Library
+2025-10-19 17:39:21.855 [main] INFO  o.l.service.BookService - Book added successfully: 978-0201633610
+2025-10-19 17:39:21.855 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134494166
+2025-10-19 17:39:21.855 [main] INFO  o.l.service.BookService - Book added successfully: 978-0137081073
+2025-10-19 17:39:21.856 [main] INFO  o.l.service.PatronService - Patron added successfully: STU9FE37E03
+2025-10-19 17:39:21.856 [main] INFO  o.l.service.PatronService - Patron added successfully: FAC68C6C0F6
+2025-10-19 17:39:21.856 [main] INFO  o.l.service.PatronService - Patron added successfully: STU7508B78D
+2025-10-19 17:39:21.859 [main] INFO  o.l.service.BookTransferService - Transfer request initiated: 154b1392-511c-4b84-923e-96f8af322f92 for book 978-0134494166 from branch BR002 to branch BR001
+2025-10-19 17:39:21.861 [main] INFO  o.l.service.BookTransferService - Transfer completed: 154b1392-511c-4b84-923e-96f8af322f92 - Book 978-0134494166 moved from branch BR002 to branch BR001
+2025-10-19 17:39:21.862 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0201633610, Patron: STU9FE37E03, Due Date: 2025-11-02T17:39:21.862584
+2025-10-19 17:39:21.862 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0201633610, Patron: STU9FE37E03
+2025-10-19 17:39:21.863 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0201633610 by patron FAC68C6C0F6
+2025-10-19 17:39:21.873 [main] INFO  o.l.service.ReservationService - Reservation created: 8a8591e2-18b7-49e5-84b5-a5a0dc1edbf5 for book 978-0201633610 at position 1
+2025-10-19 17:39:21.874 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 17:39:21.874 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0201633610
+2025-10-19 17:39:21.874 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: FAC68C6C0F6
+2025-10-19 17:39:21.874 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 1
+2025-10-19 17:39:21.874 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 17:39:21.874 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 17:39:21.875 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0201633610 by patron STU7508B78D
+2025-10-19 17:39:21.877 [main] INFO  o.l.service.ReservationService - Reservation created: a3e85a6e-3100-413c-8251-5916d5a7c65c for book 978-0201633610 at position 2
+2025-10-19 17:39:21.878 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 17:39:21.878 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0201633610
+2025-10-19 17:39:21.878 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: STU7508B78D
+2025-10-19 17:39:21.878 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 2
+2025-10-19 17:39:21.878 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 17:39:21.878 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 17:39:21.879 [main] INFO  o.l.observer.LoggingObserver - Book returned - ISBN: 978-0201633610, Patron: STU9FE37E03, Return Date: 2025-10-19T17:39:21.878745
+2025-10-19 17:39:21.882 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0201633610, Patron: STU9FE37E03
+2025-10-19 17:39:21.882 [main] INFO  o.l.service.ReservationService - Processing book return for reservations: 978-0201633610
+2025-10-19 17:39:21.883 [main] INFO  o.l.service.ReservationService - Notifying patron Dr. Bob Wilson that book 978-0201633610 is ready for pickup
+2025-10-19 17:39:21.884 [main] INFO  o.l.o.ReservationNotificationObserver - === BOOK READY FOR PICKUP ===
+2025-10-19 17:39:21.884 [main] INFO  o.l.o.ReservationNotificationObserver - Dear Dr. Bob Wilson, your reserved book is ready!
+2025-10-19 17:39:21.884 [main] INFO  o.l.o.ReservationNotificationObserver - Book ISBN: 978-0201633610
+2025-10-19 17:39:21.884 [main] INFO  o.l.o.ReservationNotificationObserver - Patron: Dr. Bob Wilson (555-2002)
+2025-10-19 17:39:21.884 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation ID: 8a8591e2-18b7-49e5-84b5-a5a0dc1edbf5
+2025-10-19 17:39:21.884 [main] INFO  o.l.o.ReservationNotificationObserver - Please pick up the book within 3 days.
+2025-10-19 17:39:21.884 [main] INFO  o.l.o.ReservationNotificationObserver - Expiry Date: 2025-10-22T17:39:21.882844
+2025-10-19 17:39:21.884 [main] INFO  o.l.o.ReservationNotificationObserver - ============================
+
+2025-10-19 17:39:21.884 [main] INFO  o.l.service.LendingService - Processed reservations for returned book: 978-0201633610
+2025-10-19 17:39:21.885 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: AuthorBasedRecommendationStrategy
+2025-10-19 17:39:21.885 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STU9FE37E03 with limit: 3
+2025-10-19 17:39:21.913 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STU9FE37E03
+2025-10-19 17:39:21.922 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: PopularityBasedRecommendationStrategy
+2025-10-19 17:39:21.922 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STU9FE37E03 with limit: 3
+2025-10-19 17:39:21.925 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STU9FE37E03
+2025-10-19 17:42:14.818 [main] INFO  o.l.service.LendingService - ReservationService integrated with LendingService
+2025-10-19 17:42:14.824 [main] INFO  o.l.service.LendingService - Observer added: LoggingObserver
+2025-10-19 17:42:14.827 [main] INFO  o.l.service.LendingService - Observer added: EmailNotificationObserver
+2025-10-19 17:42:14.827 [main] INFO  o.l.service.ReservationService - Observer added: ReservationNotificationObserver
+2025-10-19 17:42:14.843 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134685991
+2025-10-19 17:42:14.844 [main] INFO  o.l.service.BookService - Book added successfully: 978-0596009205
+2025-10-19 17:42:14.844 [main] INFO  o.l.service.BookService - Book added successfully: 978-0132350884
+2025-10-19 17:42:14.873 [main] INFO  o.l.service.PatronService - Patron added successfully: STU4739F464
+2025-10-19 17:42:14.875 [main] INFO  o.l.service.PatronService - Patron added successfully: FAC0AB761CD
+2025-10-19 17:42:14.897 [main] INFO  o.l.service.BookService - Searching books with query: Java
+2025-10-19 17:42:14.906 [main] INFO  o.l.service.BookService - Searching books with query: Martin
+2025-10-19 17:42:14.907 [main] INFO  o.l.service.BookService - Searching books with query: 978-0134685991
+2025-10-19 17:42:14.912 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0134685991, Patron: STU4739F464, Due Date: 2025-11-02T17:42:14.912056
+2025-10-19 17:42:14.916 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0134685991, Patron: STU4739F464
+2025-10-19 17:42:14.924 [main] INFO  o.l.observer.LoggingObserver - Book returned - ISBN: 978-0134685991, Patron: STU4739F464, Return Date: 2025-10-19T17:42:14.924432
+2025-10-19 17:42:14.924 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0134685991, Patron: STU4739F464
+2025-10-19 17:42:14.925 [main] INFO  o.l.service.ReservationService - Processing book return for reservations: 978-0134685991
+2025-10-19 17:42:14.936 [main] INFO  o.l.service.LendingService - Processed reservations for returned book: 978-0134685991
+2025-10-19 17:42:14.981 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0596009205, Patron: STU4739F464, Due Date: 2025-11-02T17:42:14.981363
+2025-10-19 17:42:14.982 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0596009205, Patron: STU4739F464
+2025-10-19 17:42:14.996 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR001 - Downtown Library
+2025-10-19 17:42:14.999 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR002 - Suburban Library
+2025-10-19 17:42:14.999 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR003 - University Library
+2025-10-19 17:42:15.004 [main] INFO  o.l.service.BookService - Book added successfully: 978-0201633610
+2025-10-19 17:42:15.006 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134494166
+2025-10-19 17:42:15.006 [main] INFO  o.l.service.BookService - Book added successfully: 978-0137081073
+2025-10-19 17:42:15.007 [main] INFO  o.l.service.PatronService - Patron added successfully: STU1F703232
+2025-10-19 17:42:15.008 [main] INFO  o.l.service.PatronService - Patron added successfully: FAC23F259B8
+2025-10-19 17:42:15.008 [main] INFO  o.l.service.PatronService - Patron added successfully: STUB97A9C17
+2025-10-19 17:42:15.012 [main] INFO  o.l.service.BookTransferService - Transfer request initiated: d9821935-c75a-41ac-b59a-376be5086bd2 for book 978-0134494166 from branch BR002 to branch BR001
+2025-10-19 17:42:15.013 [main] INFO  o.l.service.BookTransferService - Transfer completed: d9821935-c75a-41ac-b59a-376be5086bd2 - Book 978-0134494166 moved from branch BR002 to branch BR001
+2025-10-19 17:42:15.013 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0201633610, Patron: STU1F703232, Due Date: 2025-11-02T17:42:15.013544
+2025-10-19 17:42:15.014 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0201633610, Patron: STU1F703232
+2025-10-19 17:42:15.014 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0201633610 by patron FAC23F259B8
+2025-10-19 17:42:15.019 [main] INFO  o.l.service.ReservationService - Reservation created: cd1d7104-fa87-4adb-838e-e017a1344961 for book 978-0201633610 at position 1
+2025-10-19 17:42:15.020 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 17:42:15.021 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0201633610
+2025-10-19 17:42:15.021 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: FAC23F259B8
+2025-10-19 17:42:15.021 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 1
+2025-10-19 17:42:15.021 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 17:42:15.021 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 17:42:15.022 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0201633610 by patron STUB97A9C17
+2025-10-19 17:42:15.024 [main] INFO  o.l.service.ReservationService - Reservation created: 8a6f9ed6-bfac-4e70-8e1a-874fbea87751 for book 978-0201633610 at position 2
+2025-10-19 17:42:15.024 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 17:42:15.024 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0201633610
+2025-10-19 17:42:15.024 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: STUB97A9C17
+2025-10-19 17:42:15.024 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 2
+2025-10-19 17:42:15.024 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 17:42:15.024 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 17:42:15.024 [main] INFO  o.l.observer.LoggingObserver - Book returned - ISBN: 978-0201633610, Patron: STU1F703232, Return Date: 2025-10-19T17:42:15.024662
+2025-10-19 17:42:15.024 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0201633610, Patron: STU1F703232
+2025-10-19 17:42:15.025 [main] INFO  o.l.service.ReservationService - Processing book return for reservations: 978-0201633610
+2025-10-19 17:42:15.027 [main] INFO  o.l.service.ReservationService - Notifying patron Dr. Bob Wilson that book 978-0201633610 is ready for pickup
+2025-10-19 17:42:15.027 [main] INFO  o.l.o.ReservationNotificationObserver - === BOOK READY FOR PICKUP ===
+2025-10-19 17:42:15.027 [main] INFO  o.l.o.ReservationNotificationObserver - Dear Dr. Bob Wilson, your reserved book is ready!
+2025-10-19 17:42:15.027 [main] INFO  o.l.o.ReservationNotificationObserver - Book ISBN: 978-0201633610
+2025-10-19 17:42:15.027 [main] INFO  o.l.o.ReservationNotificationObserver - Patron: Dr. Bob Wilson (555-2002)
+2025-10-19 17:42:15.028 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation ID: cd1d7104-fa87-4adb-838e-e017a1344961
+2025-10-19 17:42:15.028 [main] INFO  o.l.o.ReservationNotificationObserver - Please pick up the book within 3 days.
+2025-10-19 17:42:15.028 [main] INFO  o.l.o.ReservationNotificationObserver - Expiry Date: 2025-10-22T17:42:15.026376
+2025-10-19 17:42:15.028 [main] INFO  o.l.o.ReservationNotificationObserver - ============================
+
+2025-10-19 17:42:15.028 [main] INFO  o.l.service.LendingService - Processed reservations for returned book: 978-0201633610
+2025-10-19 17:42:15.029 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: AuthorBasedRecommendationStrategy
+2025-10-19 17:42:15.030 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STU1F703232 with limit: 3
+2025-10-19 17:42:15.056 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STU1F703232
+2025-10-19 17:42:15.069 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: PopularityBasedRecommendationStrategy
+2025-10-19 17:42:15.069 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STU1F703232 with limit: 3
+2025-10-19 17:42:15.071 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STU1F703232
+2025-10-19 17:57:22.821 [main] INFO  o.l.service.LendingService - ReservationService integrated with LendingService
+2025-10-19 17:57:22.829 [main] INFO  o.l.service.LendingService - Observer added: LoggingObserver
+2025-10-19 17:57:22.833 [main] INFO  o.l.service.LendingService - Observer added: EmailNotificationObserver
+2025-10-19 17:57:22.834 [main] INFO  o.l.service.ReservationService - Observer added: ReservationNotificationObserver
+2025-10-19 17:57:22.841 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134685991
+2025-10-19 17:57:22.842 [main] INFO  o.l.service.BookService - Book added successfully: 978-0596009205
+2025-10-19 17:57:22.842 [main] INFO  o.l.service.BookService - Book added successfully: 978-0132350884
+2025-10-19 17:57:22.885 [main] INFO  o.l.service.PatronService - Patron added successfully: STUB44AF4D5
+2025-10-19 17:57:22.887 [main] INFO  o.l.service.PatronService - Patron added successfully: FAC38534278
+2025-10-19 17:57:22.911 [main] INFO  o.l.service.BookService - Searching books with query: Java
+2025-10-19 17:57:22.917 [main] INFO  o.l.service.BookService - Searching books with query: Martin
+2025-10-19 17:57:22.920 [main] INFO  o.l.service.BookService - Searching books with query: 978-0134685991
+2025-10-19 17:57:22.937 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0134685991, Patron: STUB44AF4D5, Due Date: 2025-11-02T17:57:22.936302
+2025-10-19 17:57:22.942 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0134685991, Patron: STUB44AF4D5
+2025-10-19 17:57:22.983 [main] INFO  o.l.observer.LoggingObserver - Book returned - ISBN: 978-0134685991, Patron: STUB44AF4D5, Return Date: 2025-10-19T17:57:22.982814
+2025-10-19 17:57:22.984 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0134685991, Patron: STUB44AF4D5
+2025-10-19 17:57:22.984 [main] INFO  o.l.service.ReservationService - Processing book return for reservations: 978-0134685991
+2025-10-19 17:57:23.002 [main] INFO  o.l.service.LendingService - Processed reservations for returned book: 978-0134685991
+2025-10-19 17:57:23.023 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0596009205, Patron: STUB44AF4D5, Due Date: 2025-11-02T17:57:23.023001
+2025-10-19 17:57:23.024 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0596009205, Patron: STUB44AF4D5
+2025-10-19 17:57:23.031 [main] INFO  o.l.service.BookService - Book modified successfully: 978-0132350884
+2025-10-19 17:57:23.033 [main] INFO  o.l.service.BookService - Book added successfully: 978-9999999999
+2025-10-19 17:57:23.036 [main] INFO  o.l.service.BookService - Book removed successfully: 978-9999999999
+2025-10-19 17:57:23.038 [main] INFO  o.l.service.PatronService - Patron updated successfully: FAC38534278
+2025-10-19 17:57:23.041 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR001 - Downtown Library
+2025-10-19 17:57:23.050 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR002 - Suburban Library
+2025-10-19 17:57:23.051 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR003 - University Library
+2025-10-19 17:57:23.058 [main] INFO  o.l.service.BookService - Book added successfully: 978-0201633610
+2025-10-19 17:57:23.061 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134494166
+2025-10-19 17:57:23.064 [main] INFO  o.l.service.BookService - Book added successfully: 978-0137081073
+2025-10-19 17:57:23.068 [main] INFO  o.l.service.PatronService - Patron added successfully: STU751E6337
+2025-10-19 17:57:23.068 [main] INFO  o.l.service.PatronService - Patron added successfully: FACF691A011
+2025-10-19 17:57:23.068 [main] INFO  o.l.service.PatronService - Patron added successfully: STUB190D338
+2025-10-19 17:57:23.074 [main] INFO  o.l.service.BookTransferService - Transfer request initiated: d9f339dd-4751-4728-9167-49094040de18 for book 978-0134494166 from branch BR002 to branch BR001
+2025-10-19 17:57:23.078 [main] INFO  o.l.service.BookTransferService - Transfer completed: d9f339dd-4751-4728-9167-49094040de18 - Book 978-0134494166 moved from branch BR002 to branch BR001
+2025-10-19 17:57:23.079 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0201633610, Patron: STU751E6337, Due Date: 2025-11-02T17:57:23.078987
+2025-10-19 17:57:23.084 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0201633610, Patron: STU751E6337
+2025-10-19 17:57:23.085 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0201633610 by patron FACF691A011
+2025-10-19 17:57:23.095 [main] INFO  o.l.service.ReservationService - Reservation created: fb308536-5a4d-419b-bae9-11ab1829d834 for book 978-0201633610 at position 1
+2025-10-19 17:57:23.096 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 17:57:23.097 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0201633610
+2025-10-19 17:57:23.097 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: FACF691A011
+2025-10-19 17:57:23.098 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 1
+2025-10-19 17:57:23.098 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 17:57:23.098 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 17:57:23.100 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0201633610 by patron STUB190D338
+2025-10-19 17:57:23.103 [main] INFO  o.l.service.ReservationService - Reservation created: b3d1685d-7147-4029-bb04-970a1d65c28d for book 978-0201633610 at position 2
+2025-10-19 17:57:23.103 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 17:57:23.103 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0201633610
+2025-10-19 17:57:23.104 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: STUB190D338
+2025-10-19 17:57:23.104 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 2
+2025-10-19 17:57:23.104 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 17:57:23.104 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 17:57:23.105 [main] INFO  o.l.observer.LoggingObserver - Book returned - ISBN: 978-0201633610, Patron: STU751E6337, Return Date: 2025-10-19T17:57:23.105693
+2025-10-19 17:57:23.106 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0201633610, Patron: STU751E6337
+2025-10-19 17:57:23.107 [main] INFO  o.l.service.ReservationService - Processing book return for reservations: 978-0201633610
+2025-10-19 17:57:23.108 [main] INFO  o.l.service.ReservationService - Notifying patron Dr. Bob Wilson that book 978-0201633610 is ready for pickup
+2025-10-19 17:57:23.109 [main] INFO  o.l.o.ReservationNotificationObserver - === BOOK READY FOR PICKUP ===
+2025-10-19 17:57:23.110 [main] INFO  o.l.o.ReservationNotificationObserver - Dear Dr. Bob Wilson, your reserved book is ready!
+2025-10-19 17:57:23.110 [main] INFO  o.l.o.ReservationNotificationObserver - Book ISBN: 978-0201633610
+2025-10-19 17:57:23.110 [main] INFO  o.l.o.ReservationNotificationObserver - Patron: Dr. Bob Wilson (555-2002)
+2025-10-19 17:57:23.110 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation ID: fb308536-5a4d-419b-bae9-11ab1829d834
+2025-10-19 17:57:23.110 [main] INFO  o.l.o.ReservationNotificationObserver - Please pick up the book within 3 days.
+2025-10-19 17:57:23.110 [main] INFO  o.l.o.ReservationNotificationObserver - Expiry Date: 2025-10-22T17:57:23.107682
+2025-10-19 17:57:23.112 [main] INFO  o.l.o.ReservationNotificationObserver - ============================
+
+2025-10-19 17:57:23.115 [main] INFO  o.l.service.LendingService - Processed reservations for returned book: 978-0201633610
+2025-10-19 17:57:23.116 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: AuthorBasedRecommendationStrategy
+2025-10-19 17:57:23.117 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STU751E6337 with limit: 3
+2025-10-19 17:57:23.150 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STU751E6337
+2025-10-19 17:57:23.162 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: PopularityBasedRecommendationStrategy
+2025-10-19 17:57:23.163 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STU751E6337 with limit: 3
+2025-10-19 17:57:23.167 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STU751E6337
+2025-10-19 18:03:45.897 [main] INFO  o.l.service.LendingService - ReservationService integrated with LendingService
+2025-10-19 18:03:45.904 [main] INFO  o.l.service.LendingService - Observer added: LoggingObserver
+2025-10-19 18:03:45.908 [main] INFO  o.l.service.LendingService - Observer added: EmailNotificationObserver
+2025-10-19 18:03:45.908 [main] INFO  o.l.service.ReservationService - Observer added: ReservationNotificationObserver
+2025-10-19 18:03:45.933 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134685991
+2025-10-19 18:03:45.933 [main] INFO  o.l.service.BookService - Book added successfully: 978-0596009205
+2025-10-19 18:03:45.933 [main] INFO  o.l.service.BookService - Book added successfully: 978-0132350884
+2025-10-19 18:03:45.975 [main] INFO  o.l.service.PatronService - Patron added successfully: STU3BEC9711
+2025-10-19 18:03:45.976 [main] INFO  o.l.service.PatronService - Patron added successfully: FAC548FCCDE
+2025-10-19 18:03:45.993 [main] INFO  o.l.service.BookService - Searching books with query: Java
+2025-10-19 18:03:46.000 [main] INFO  o.l.service.BookService - Searching books with query: Martin
+2025-10-19 18:03:46.001 [main] INFO  o.l.service.BookService - Searching books with query: 978-0134685991
+2025-10-19 18:03:46.006 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0134685991, Patron: STU3BEC9711, Due Date: 2025-11-02T18:03:46.005846
+2025-10-19 18:03:46.010 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0134685991, Patron: STU3BEC9711
+2025-10-19 18:03:46.020 [main] INFO  o.l.observer.LoggingObserver - Book returned - ISBN: 978-0134685991, Patron: STU3BEC9711, Return Date: 2025-10-19T18:03:46.020014
+2025-10-19 18:03:46.020 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0134685991, Patron: STU3BEC9711
+2025-10-19 18:03:46.020 [main] INFO  o.l.service.ReservationService - Processing book return for reservations: 978-0134685991
+2025-10-19 18:03:46.037 [main] INFO  o.l.service.LendingService - Processed reservations for returned book: 978-0134685991
+2025-10-19 18:03:46.045 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0596009205, Patron: STU3BEC9711, Due Date: 2025-11-02T18:03:46.045438
+2025-10-19 18:03:46.046 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0596009205, Patron: STU3BEC9711
+2025-10-19 18:03:46.048 [main] INFO  o.l.service.BookService - Book modified successfully: 978-0132350884
+2025-10-19 18:03:46.051 [main] INFO  o.l.service.BookService - Book added successfully: 978-9999999999
+2025-10-19 18:03:46.053 [main] INFO  o.l.service.BookService - Book removed successfully: 978-9999999999
+2025-10-19 18:03:46.054 [main] INFO  o.l.service.PatronService - Patron updated successfully: FAC548FCCDE
+2025-10-19 18:03:46.060 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR001 - Downtown Library
+2025-10-19 18:03:46.063 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR002 - Suburban Library
+2025-10-19 18:03:46.063 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR003 - University Library
+2025-10-19 18:03:46.071 [main] INFO  o.l.service.BookService - Book added successfully: 978-0201633610
+2025-10-19 18:03:46.071 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134494166
+2025-10-19 18:03:46.071 [main] INFO  o.l.service.BookService - Book added successfully: 978-0137081073
+2025-10-19 18:03:46.074 [main] INFO  o.l.service.PatronService - Patron added successfully: STU3349BEE2
+2025-10-19 18:03:46.074 [main] INFO  o.l.service.PatronService - Patron added successfully: FAC43470467
+2025-10-19 18:03:46.074 [main] INFO  o.l.service.PatronService - Patron added successfully: STUABF19728
+2025-10-19 18:03:46.077 [main] INFO  o.l.service.BookTransferService - Transfer request initiated: 62efcac5-524a-489d-a1c9-078314968bcd for book 978-0134494166 from branch BR002 to branch BR001
+2025-10-19 18:03:46.079 [main] INFO  o.l.service.BookTransferService - Transfer completed: 62efcac5-524a-489d-a1c9-078314968bcd - Book 978-0134494166 moved from branch BR002 to branch BR001
+2025-10-19 18:03:46.080 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0201633610, Patron: STU3349BEE2, Due Date: 2025-11-02T18:03:46.080390
+2025-10-19 18:03:46.081 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0201633610, Patron: STU3349BEE2
+2025-10-19 18:03:46.082 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0201633610 by patron FAC43470467
+2025-10-19 18:03:46.088 [main] INFO  o.l.service.ReservationService - Reservation created: 73bee4ed-c273-4d58-9813-59c90dc5210f for book 978-0201633610 at position 1
+2025-10-19 18:03:46.089 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 18:03:46.090 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0201633610
+2025-10-19 18:03:46.090 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: FAC43470467
+2025-10-19 18:03:46.090 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 1
+2025-10-19 18:03:46.090 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 18:03:46.090 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 18:03:46.091 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0201633610 by patron STUABF19728
+2025-10-19 18:03:46.092 [main] INFO  o.l.service.ReservationService - Reservation created: 78962d3b-8ca9-43a3-aa66-2b776e8982c9 for book 978-0201633610 at position 2
+2025-10-19 18:03:46.092 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 18:03:46.092 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0201633610
+2025-10-19 18:03:46.092 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: STUABF19728
+2025-10-19 18:03:46.092 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 2
+2025-10-19 18:03:46.092 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 18:03:46.092 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 18:03:46.093 [main] INFO  o.l.observer.LoggingObserver - Book returned - ISBN: 978-0201633610, Patron: STU3349BEE2, Return Date: 2025-10-19T18:03:46.093655
+2025-10-19 18:03:46.094 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0201633610, Patron: STU3349BEE2
+2025-10-19 18:03:46.094 [main] INFO  o.l.service.ReservationService - Processing book return for reservations: 978-0201633610
+2025-10-19 18:03:46.095 [main] INFO  o.l.service.ReservationService - Notifying patron Dr. Bob Wilson that book 978-0201633610 is ready for pickup
+2025-10-19 18:03:46.095 [main] INFO  o.l.o.ReservationNotificationObserver - === BOOK READY FOR PICKUP ===
+2025-10-19 18:03:46.095 [main] INFO  o.l.o.ReservationNotificationObserver - Dear Dr. Bob Wilson, your reserved book is ready!
+2025-10-19 18:03:46.095 [main] INFO  o.l.o.ReservationNotificationObserver - Book ISBN: 978-0201633610
+2025-10-19 18:03:46.095 [main] INFO  o.l.o.ReservationNotificationObserver - Patron: Dr. Bob Wilson (555-2002)
+2025-10-19 18:03:46.095 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation ID: 73bee4ed-c273-4d58-9813-59c90dc5210f
+2025-10-19 18:03:46.095 [main] INFO  o.l.o.ReservationNotificationObserver - Please pick up the book within 3 days.
+2025-10-19 18:03:46.096 [main] INFO  o.l.o.ReservationNotificationObserver - Expiry Date: 2025-10-22T18:03:46.094851
+2025-10-19 18:03:46.097 [main] INFO  o.l.o.ReservationNotificationObserver - ============================
+
+2025-10-19 18:03:46.098 [main] INFO  o.l.service.LendingService - Processed reservations for returned book: 978-0201633610
+2025-10-19 18:03:46.099 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: AuthorBasedRecommendationStrategy
+2025-10-19 18:03:46.100 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STU3349BEE2 with limit: 3
+2025-10-19 18:03:46.129 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STU3349BEE2
+2025-10-19 18:03:46.139 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: PopularityBasedRecommendationStrategy
+2025-10-19 18:03:46.139 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STU3349BEE2 with limit: 3
+2025-10-19 18:03:46.142 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STU3349BEE2
+2025-10-19 18:48:32.932 [main] INFO  o.l.service.LendingService - ReservationService integrated with LendingService
+2025-10-19 18:48:32.940 [main] INFO  o.l.service.LendingService - Observer added: LoggingObserver
+2025-10-19 18:48:32.943 [main] INFO  o.l.service.LendingService - Observer added: EmailNotificationObserver
+2025-10-19 18:48:32.944 [main] INFO  o.l.service.ReservationService - Observer added: ReservationNotificationObserver
+2025-10-19 18:48:32.951 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134685991
+2025-10-19 18:48:32.952 [main] INFO  o.l.service.BookService - Book added successfully: 978-0596009205
+2025-10-19 18:48:32.952 [main] INFO  o.l.service.BookService - Book added successfully: 978-0132350884
+2025-10-19 18:48:32.996 [main] INFO  o.l.service.PatronService - Patron added successfully: STU7DB90A5B
+2025-10-19 18:48:32.997 [main] INFO  o.l.service.PatronService - Patron added successfully: FACC62F6A43
+2025-10-19 18:48:33.038 [main] INFO  o.l.service.BookService - Searching books with query: Java
+2025-10-19 18:48:33.046 [main] INFO  o.l.service.BookService - Searching books with query: Martin
+2025-10-19 18:48:33.048 [main] INFO  o.l.service.BookService - Searching books with query: 978-0134685991
+2025-10-19 18:48:33.055 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0134685991, Patron: STU7DB90A5B, Due Date: 2025-11-02T18:48:33.055081
+2025-10-19 18:48:33.060 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0134685991, Patron: STU7DB90A5B
+2025-10-19 18:48:33.072 [main] INFO  o.l.observer.LoggingObserver - Book returned - ISBN: 978-0134685991, Patron: STU7DB90A5B, Return Date: 2025-10-19T18:48:33.072196
+2025-10-19 18:48:33.073 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0134685991, Patron: STU7DB90A5B
+2025-10-19 18:48:33.073 [main] INFO  o.l.service.ReservationService - Processing book return for reservations: 978-0134685991
+2025-10-19 18:48:33.098 [main] INFO  o.l.service.LendingService - Processed reservations for returned book: 978-0134685991
+2025-10-19 18:48:33.105 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0596009205, Patron: STU7DB90A5B, Due Date: 2025-11-02T18:48:33.104973
+2025-10-19 18:48:33.105 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0596009205, Patron: STU7DB90A5B
+2025-10-19 18:48:33.111 [main] INFO  o.l.service.BookService - Book modified successfully: 978-0132350884
+2025-10-19 18:48:33.113 [main] INFO  o.l.service.BookService - Book added successfully: 978-9999999999
+2025-10-19 18:48:33.114 [main] INFO  o.l.service.BookService - Book removed successfully: 978-9999999999
+2025-10-19 18:48:33.114 [main] INFO  o.l.service.PatronService - Patron updated successfully: FACC62F6A43
+2025-10-19 18:48:33.116 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR001 - Downtown Library
+2025-10-19 18:48:33.118 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR002 - Suburban Library
+2025-10-19 18:48:33.118 [main] INFO  o.l.service.BranchService - Branch registered successfully: BR003 - University Library
+2025-10-19 18:48:33.119 [main] INFO  o.l.service.BookService - Book added successfully: 978-0201633610
+2025-10-19 18:48:33.120 [main] INFO  o.l.service.BookService - Book added successfully: 978-0134494166
+2025-10-19 18:48:33.120 [main] INFO  o.l.service.BookService - Book added successfully: 978-0137081073
+2025-10-19 18:48:33.122 [main] INFO  o.l.service.PatronService - Patron added successfully: STU7141233E
+2025-10-19 18:48:33.124 [main] INFO  o.l.service.PatronService - Patron added successfully: FAC1FB6E83D
+2025-10-19 18:48:33.125 [main] INFO  o.l.service.PatronService - Patron added successfully: STU1D926470
+2025-10-19 18:48:33.131 [main] INFO  o.l.service.BookTransferService - Transfer request initiated: 5c3cb6aa-cad6-4284-87cd-888910af8a21 for book 978-0134494166 from branch BR002 to branch BR001
+2025-10-19 18:48:33.135 [main] INFO  o.l.service.BookTransferService - Transfer completed: 5c3cb6aa-cad6-4284-87cd-888910af8a21 - Book 978-0134494166 moved from branch BR002 to branch BR001
+2025-10-19 18:48:33.136 [main] INFO  o.l.observer.LoggingObserver - Book borrowed - ISBN: 978-0201633610, Patron: STU7141233E, Due Date: 2025-11-02T18:48:33.135964
+2025-10-19 18:48:33.137 [main] INFO  o.l.service.LendingService - Book borrowed - ISBN: 978-0201633610, Patron: STU7141233E
+2025-10-19 18:48:33.137 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0201633610 by patron FAC1FB6E83D
+2025-10-19 18:48:33.149 [main] INFO  o.l.service.ReservationService - Reservation created: 60736db8-d6be-4bdf-9de1-36dbcf716959 for book 978-0201633610 at position 1
+2025-10-19 18:48:33.150 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 18:48:33.150 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0201633610
+2025-10-19 18:48:33.150 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: FAC1FB6E83D
+2025-10-19 18:48:33.150 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 1
+2025-10-19 18:48:33.150 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 18:48:33.150 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 18:48:33.151 [main] INFO  o.l.service.ReservationService - Creating reservation for book 978-0201633610 by patron STU1D926470
+2025-10-19 18:48:33.152 [main] INFO  o.l.service.ReservationService - Reservation created: 5deda626-9edb-4963-96a1-1f71292ea4bc for book 978-0201633610 at position 2
+2025-10-19 18:48:33.152 [main] INFO  o.l.o.ReservationNotificationObserver - === RESERVATION NOTIFICATION ===
+2025-10-19 18:48:33.152 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation created for book: 978-0201633610
+2025-10-19 18:48:33.152 [main] INFO  o.l.o.ReservationNotificationObserver - Patron ID: STU1D926470
+2025-10-19 18:48:33.152 [main] INFO  o.l.o.ReservationNotificationObserver - Queue Position: 2
+2025-10-19 18:48:33.152 [main] INFO  o.l.o.ReservationNotificationObserver - You will be notified when the book becomes available.
+2025-10-19 18:48:33.153 [main] INFO  o.l.o.ReservationNotificationObserver - ===============================
+
+2025-10-19 18:48:33.154 [main] INFO  o.l.observer.LoggingObserver - Book returned - ISBN: 978-0201633610, Patron: STU7141233E, Return Date: 2025-10-19T18:48:33.154098
+2025-10-19 18:48:33.154 [main] INFO  o.l.service.LendingService - Book returned - ISBN: 978-0201633610, Patron: STU7141233E
+2025-10-19 18:48:33.154 [main] INFO  o.l.service.ReservationService - Processing book return for reservations: 978-0201633610
+2025-10-19 18:48:33.155 [main] INFO  o.l.service.ReservationService - Notifying patron Dr. Bob Wilson that book 978-0201633610 is ready for pickup
+2025-10-19 18:48:33.155 [main] INFO  o.l.o.ReservationNotificationObserver - === BOOK READY FOR PICKUP ===
+2025-10-19 18:48:33.155 [main] INFO  o.l.o.ReservationNotificationObserver - Dear Dr. Bob Wilson, your reserved book is ready!
+2025-10-19 18:48:33.155 [main] INFO  o.l.o.ReservationNotificationObserver - Book ISBN: 978-0201633610
+2025-10-19 18:48:33.155 [main] INFO  o.l.o.ReservationNotificationObserver - Patron: Dr. Bob Wilson (555-2002)
+2025-10-19 18:48:33.155 [main] INFO  o.l.o.ReservationNotificationObserver - Reservation ID: 60736db8-d6be-4bdf-9de1-36dbcf716959
+2025-10-19 18:48:33.155 [main] INFO  o.l.o.ReservationNotificationObserver - Please pick up the book within 3 days.
+2025-10-19 18:48:33.155 [main] INFO  o.l.o.ReservationNotificationObserver - Expiry Date: 2025-10-22T18:48:33.155035
+2025-10-19 18:48:33.156 [main] INFO  o.l.o.ReservationNotificationObserver - ============================
+
+2025-10-19 18:48:33.156 [main] INFO  o.l.service.LendingService - Processed reservations for returned book: 978-0201633610
+2025-10-19 18:48:33.157 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: AuthorBasedRecommendationStrategy
+2025-10-19 18:48:33.158 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STU7141233E with limit: 3
+2025-10-19 18:48:33.183 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STU7141233E
+2025-10-19 18:48:33.194 [main] INFO  o.l.service.RecommendationService - Recommendation strategy changed to: PopularityBasedRecommendationStrategy
+2025-10-19 18:48:33.194 [main] INFO  o.l.service.RecommendationService - Generating recommendations for patron: STU7141233E with limit: 3
+2025-10-19 18:48:33.197 [main] INFO  o.l.service.RecommendationService - Generated 3 recommendations for patron STU7141233E
